@@ -6,10 +6,14 @@ import { getChats } from "../redux/chatReduser/selectors";
 function App() {
   const chats = useSelector(getChats);
   const dispatch = useDispatch();
-  const { name, setName } = useState("");
+  const [name, setName] = useState("");
 
   const handleDelete = (id) => {
-    dispatch({ type: 'delete', payload: id })
+    dispatch({
+      type: 'delete', payload: id, meta: {
+        delay: 1000
+      }
+    })
   };
 
   const handleChange = (event) => {
