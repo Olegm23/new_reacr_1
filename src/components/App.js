@@ -2,7 +2,7 @@ import React from "react";
 
 function App() {
   return (
-    <div>HOMEWORK 9</div>
+    <div>HOMEWORK_9</div>
   );
 };
 
