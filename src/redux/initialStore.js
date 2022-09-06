@@ -1,9 +1,5 @@
-import { applyMiddleware, combineReducers, createStore } from "redux";
-import { createLogger } from "redux-logger";
-import { chatReduser } from "./chatReduser/chatReduser";
-import { messageReduser } from "./messagesReduser/messageReduser";
-import storage from "redux-persist/lib/storage";
-import { persistReducer, persistStore } from "redux-persist";
+import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
+import { postsReducer } from "./postsReduser/postsReducer";
 
-export const store = createStore(applyMiddleware(thunk));
+export const store = createStore(postsReducer, applyMiddleware(thunk));
